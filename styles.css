@@ -130,6 +130,22 @@ body {
     max-width: 500px;
 }
 
+.hero-highlights {
+    list-style: none;
+    margin: 0 0 2rem;
+    padding: 0;
+    display: grid;
+    gap: 0.6rem;
+    color: var(--text-secondary);
+}
+
+.hero-highlights li {
+    background: rgba(99, 102, 241, 0.08);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.6rem 0.9rem;
+}
+
 .cta-buttons {
     display: flex;
     gap: 1rem;
@@ -426,6 +442,47 @@ section {
     font-size: 1.3rem;
 }
 
+.contact-form {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.contact-form label {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-top: 0.4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    padding: 0.8rem 0.9rem;
+    font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.contact-submit {
+    margin-top: 0.8rem;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+}
+
 .availability {
     background: var(--bg-card);
     padding: 1.2rem;
@@ -435,6 +492,38 @@ section {
 }
 
 .availability strong {
+    color: var(--accent);
+}
+
+/* Back to top */
+.back-to-top {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    z-index: 900;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    border-color: var(--accent);
     color: var(--accent);
 }
 
@@ -496,8 +585,18 @@ section {
         margin: 0 auto 2rem;
     }
 
+    .hero-highlights {
+        text-align: left;
+        max-width: 500px;
+        margin: 0 auto 2rem;
+    }
+
     .cta-buttons {
         justify-content: center;
+    }
+
+    .contact-submit {
+        width: 100%;
     }
 
     .hero-visual {

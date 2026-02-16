@@ -55,4 +55,30 @@ document.querySelectorAll('.project-card, .skill-category').forEach(el => {
     observer.observe(el);
 });
 
-console.log('Portfolio loaded — built with OpenClaw 💫');
+console.log('Portfolio loaded successfully 💫');
+
+
+// Dynamic footer year
+const yearEl = document.querySelector('#year');
+if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+}
+
+// Back to top button
+const backToTopBtn = document.querySelector('#back-to-top');
+if (backToTopBtn) {
+    const toggleBackToTop = () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    };
+
+    window.addEventListener('scroll', toggleBackToTop);
+    toggleBackToTop();
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}

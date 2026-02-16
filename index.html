@@ -33,6 +33,11 @@
                         <h1>Tadeáš Reindl</h1>
                         <h2 class="subtitle">IT Student & Automation Developer</h2>
                         <p class="tagline">Building intelligent systems that make work easier. Currently finishing my 4th semester at IT school and seeking a full-time IT Support/System Administration role starting March 2026.</p>
+                        <ul class="hero-highlights">
+                            <li>⚡ Fast learner with hands-on automation experience</li>
+                            <li>🛠️ Focused on reliable, practical IT solutions</li>
+                            <li>📍 Based in Vienna, open for on-site and hybrid roles</li>
+                        </ul>
                         <div class="cta-buttons">
                             <a href="#projects" class="btn btn-primary">View Projects</a>
                             <a href="#contact" class="btn btn-secondary">Get in Touch</a>
@@ -232,6 +237,23 @@ const ted = {
                             Telegram: @RNRWNKLR
                         </a>
                     </div>
+                    <form class="contact-form" action="https://formsubmit.co/tadeas.reindl@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="Neue Kontaktanfrage über Portfolio">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://pikachugende.github.io/#contact">
+
+                        <label for="contact-name">Name</label>
+                        <input id="contact-name" name="name" type="text" required placeholder="Dein Name">
+
+                        <label for="contact-email">E-Mail</label>
+                        <input id="contact-email" name="email" type="email" required placeholder="deine@email.com">
+
+                        <label for="contact-message">Nachricht</label>
+                        <textarea id="contact-message" name="message" rows="5" required placeholder="Worum geht's?"></textarea>
+
+                        <button type="submit" class="btn btn-primary contact-submit">Nachricht senden</button>
+                    </form>
+
                     <div class="availability">
                         <strong>Availability:</strong> Full-time from March 2026 (also open to part-time projects before then)
                     </div>
@@ -242,10 +264,12 @@ const ted = {
 
     <footer class="footer">
         <div class="container">
-            <p>© 2026 Tadeáš Reindl. Built with OpenClaw & GitHub Pages.</p>
+            <p>© <span id="year"></span> Tadeáš Reindl. Built with passion & GitHub Pages.</p>
             <p class="footer-tagline">No worries, building freedom. 🚀</p>
         </div>
     </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
 
     <script src="script.js"></script>
 </body>
