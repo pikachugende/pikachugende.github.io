@@ -1,261 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tadeáš Reindl - IT Student & Developer</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Tadeáš Reindl | About Me, Projekte & IT Profil</title>
+    <meta name="description" content="About-Me Seite von Tadeáš Reindl: IT-Student aus Wien mit Fokus auf IT Support, Systemadministration, Automation und praktische Projekte.">
+    <meta property="og:title" content="Tadeáš Reindl | About Me & IT-Projekte">
+    <meta property="og:description" content="Kurzprofil, ausgewählte Projekte und Kontaktmöglichkeiten für GitHub-Besucher und potenzielle Arbeitgeber.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pikachugende.github.io/">
+    <meta property="og:image" content="https://pikachugende.github.io/assets/portfolio-preview.svg">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">TR</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn">☰</button>
-        </div>
-    </nav>
+    <header class="site-header" id="top">
+        <nav class="navbar" aria-label="Hauptnavigation">
+            <div class="container nav-inner">
+                <a class="logo" href="#top" aria-label="Startseite">TR</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#projects">Projekte</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+                <div class="header-actions">
+                    <button id="theme-toggle" class="btn btn-ghost" type="button" aria-label="Farbmodus wechseln">🌙</button>
+                    <button class="mobile-menu-btn" aria-label="Menü öffnen" type="button">☰</button>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero">
+        <section id="hero" class="hero section">
             <div class="container">
                 <div class="hero-content">
-                    <div class="hero-text">
-                        <p class="greeting">Hello, I'm</p>
+                    <div class="hero-text card reveal">
+                        <p class="greeting">Hey, ich bin</p>
                         <h1>Tadeáš Reindl</h1>
-                        <h2 class="subtitle">IT Student & Automation Developer</h2>
-                        <p class="tagline">Building intelligent systems that make work easier. Currently finishing my 4th semester at IT school and seeking a full-time IT Support/System Administration role starting March 2026.</p>
-                        <ul class="hero-highlights">
-                            <li>⚡ Fast learner with hands-on automation experience</li>
-                            <li>🛠️ Focused on reliable, practical IT solutions</li>
-                            <li>📍 Based in Vienna, open for on-site and hybrid roles</li>
-                        </ul>
+                        <p class="subtitle">IT-Student aus Wien · Fokus auf IT Support, SysAdmin & Automation</p>
+                        <p class="tagline">Diese Seite ist mein kompaktes <strong>About-me Profil</strong>: für Leute, die über GitHub auf mich stoßen, und für Firmen, die schnell sehen wollen, wie ich arbeite, was ich baue und wonach ich suche.</p>
                         <div class="cta-buttons">
-                            <a href="#projects" class="btn btn-primary">View Projects</a>
-                            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                            <a href="#about" class="btn btn-primary">Kurzprofil lesen</a>
+                            <a href="#contact" class="btn btn-secondary">Kontakt aufnehmen</a>
                         </div>
                     </div>
-                    <div class="hero-visual">
-                        <div class="code-window">
+                    <div class="hero-visual reveal">
+                        <div class="code-window card">
                             <div class="window-header">
                                 <span class="dot red"></span>
                                 <span class="dot yellow"></span>
                                 <span class="dot green"></span>
-                                <span class="title">portfolio.ts</span>
+                                <span class="window-title">about-me.ts</span>
                             </div>
-                            <pre class="code-content">
-const ted = {
-    name: "Tadeáš Reindl",
-    status: "IT Student (Final Semester)",
-    goal: "Build clever systems",
-   skills: ["TypeScript", "Node.js", "Git", "OpenClaw", "Automation"],
-    available: "March 2026",
-    location: "Vienna, Austria"
+                            <pre class="code-content"><code>const tadeas = {
+  role: "IT-Student & Automation Developer",
+  lookingFor: "Vollzeitrolle ab März 2026",
+  strengths: ["hands-on", "strukturiert", "lernbereit"],
+  focus: ["IT Support", "Systemadministration", "DevOps"],
+  location: "Wien"
 };
 
-// Let's build something amazing! 🚀</pre>
+// Build practical solutions 🚀</code></pre>
                         </div>
+
+                        <figure class="hero-preview card">
+                            <img src="assets/portfolio-preview.svg" width="640" height="420" loading="lazy" alt="Grafische Vorschau des Portfolio-Projekts als Dashboard-Illustration.">
+                            <figcaption>Mini-Demo meiner Portfolio-Struktur.</figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>I'm a passionate IT student in my final semester at Spengergasse, Vienna. I specialize in building automation tools and AI-powered assistants that streamline workflows and boost productivity.</p>
-                        <p>My journey began with a curiosity about how systems work together. Today, I create intelligent agents, study optimization tools, and deployment pipelines that make complex tasks simple.</p>
-                        <p>When I'm not coding, I'm exploring new technologies, contributing to open-source projects, and planning my next big idea. My ultimate vision? No worries, financial freedom, and maybe a Tesla someday. 🚗⚡</p>
-                        <div class="about-details">
-                            <div class="detail-item">
-                                <strong>Location:</strong> Vienna, Austria
-                            </div>
-                            <div class="detail-item">
-                                <strong>Education:</strong> IT School (4th semester, graduating 2026)
-                            </div>
-                            <div class="detail-item">
-                                <strong>Available:</strong> Full-time from March 2026
-                            </div>
-                            <div class="detail-item">
-                                <strong>Interested in:</strong> IT Support, System Administration, DevOps, Agent Development
-                            </div>
-                        </div>
+        <section id="about" class="section">
+            <div class="container narrow">
+                <h2 class="section-title">About me auf einen Blick</h2>
+                <div class="card reveal">
+                    <p class="about-intro">Ich mache komplexe IT-Themen verständlich und umsetzbar. Besonders Spaß macht mir, wenn aus manuellen Abläufen stabile, dokumentierte Prozesse werden.</p>
+                    <div class="about-details">
+                        <div class="detail-item"><strong>Standort</strong><br>Wien, Österreich</div>
+                        <div class="detail-item"><strong>Aktuell</strong><br>Abschlusssemester IT-Schule</div>
+                        <div class="detail-item"><strong>Verfügbarkeit</strong><br>Vollzeit ab März 2026</div>
                     </div>
+                    <ul class="audience-list">
+                        <li><strong>Für GitHub-Besucher:</strong> schneller Überblick über meine Projekte und Arbeitsweise.</li>
+                        <li><strong>Für potenzielle Firmen:</strong> Fokus auf Praxiserfahrung, Zuverlässigkeit und Lernkurve.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills">
+        <section id="projects" class="section section-alt">
             <div class="container">
-                <h2 class="section-title">Skills & Technologies</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Languages & Frameworks</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">TypeScript</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">HTML/CSS</span>
-                            <span class="skill-tag">Git</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>AI & Automation</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">OpenClaw Agents</span>
-                            <span class="skill-tag">Proactive Systems</span>
-                            <span class="skill-tag">Spaced Repetition</span>
-                            <span class="skill-tag">Workflow Automation</span>
-                            <span class="skill-tag">Skill Development</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>DevOps & Tools</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">GitHub Actions</span>
-                            <span class="skill-tag">GitHub Pages</span>
-                            <span class="skill-tag">CLI Tools</span>
-                            <span class="skill-tag">ffmpeg</span>
-                            <span class="skill-tag">Google Workspace CLI</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Soft Skills</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Proactive Problem Solving</span>
-                            <span class="skill-tag">Documentation</span>
-                            <span class="skill-tag">Autonomous Work</span>
-                            <span class="skill-tag">Continuous Learning</span>
-                            <span class="skill-tag">German & English</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
+                <h2 class="section-title">Ausgewählte Projekte</h2>
                 <div class="projects-grid">
-                    <article class="project-card">
-                        <div class="project-header">
-                            <h3>Semester Intelligence</h3>
-                            <span class="project-badge">Skill</span>
-                        </div>
-                        <p class="project-description">Comprehensive AI skill for proactive study organization and exam preparation. Features automatic course detection, material collection, spaced repetition, and adaptive planning.</p>
-                        <div class="project-tech">
-                            <span>TypeScript</span>
-                            <span>OpenClaw</span>
-                            <span>Spaced Repetition</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/pikachugende/semester-intelligence" target="_blank" rel="noopener">View Code</a>
-                        </div>
+                    <article class="project-card card reveal">
+                        <h3>Proactive Agent Framework</h3>
+                        <p>Onboarding-, Memory- und Workflow-System für einen autonomen AI-Companion mit Fokus auf Zuverlässigkeit.</p>
+                        <div class="project-tech"><span>OpenClaw</span><span>Agent Design</span><span>TypeScript</span></div>
+                        <a href="https://github.com/pikachugende" class="btn btn-primary" target="_blank" rel="noopener">Repository öffnen</a>
                     </article>
-
-                    <article class="project-card">
-                        <div class="project-header">
-                            <h3>Proactive Agent Framework</h3>
-                            <span class="project-badge">Infrastructure</span>
-                        </div>
-                        <p class="project-description">Complete onboarding and configuration system for an autonomous AI companion. Implements memory systems, heartbeat checks, proactive workflows, and preference learning.</p>
-                        <div class="project-tech">
-                            <span>OpenClaw</span>
-                            <span>Agent Design</span>
-                            <span>Memory Mgmt</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/pikachugende" target="_blank" rel="noopener">View Repos</a>
-                        </div>
+                    <article class="project-card card reveal">
+                        <h3>Audio Transcription Pipeline</h3>
+                        <p>Whisper-Workflow mit ffmpeg-Integration für stabile Audio-zu-Text-Prozesse und reproduzierbare Setups.</p>
+                        <div class="project-tech"><span>Whisper</span><span>ffmpeg</span><span>Node.js</span></div>
+                        <a href="https://github.com/pikachugende" class="btn btn-primary" target="_blank" rel="noopener">Code ansehen</a>
                     </article>
-
-                    <article class="project-card">
-                        <div class="project-header">
-                            <h3>Audio Transcription Pipeline</h3>
-                            <span class="project-badge">Tooling</span>
-                        </div>
-                        <p class="project-description">Built a reliable Whisper-based transcription system on Windows using @ffmpeg-installer. Solved PATH configuration issues to enable seamless audio-to-text conversion.</p>
-                        <div class="project-tech">
-                            <span>Whisper</span>
-                            <span>ffmpeg</span>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/pikachugende" target="_blank" rel="noopener">View Code</a>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-header">
-                            <h3>GitHub Pages Automation</h3>
-                            <span class="project-badge">DevOps</span>
-                        </div>
-                        <p class="project-description">Setup automated deployment pipelines for static sites using GitHub Actions. Portfolio sites, landing pages, and documentation sites deploy with a single commit.</p>
-                        <div class="project-tech">
-                            <span>GitHub Actions</span>
-                            <span>Static Sites</span>
-                            <span>CI/CD</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://pikachugende.github.io" target="_blank" rel="noopener">Live Demo</a>
-                        </div>
+                    <article class="project-card card reveal">
+                        <h3>GitHub Pages Automation</h3>
+                        <p>Deployment-Pipelines für statische Seiten via GitHub Actions mit schnellem Iterationszyklus.</p>
+                        <div class="project-tech"><span>GitHub Actions</span><span>CI/CD</span><span>Static Sites</span></div>
+                        <a href="https://pikachugende.github.io" class="btn btn-primary" target="_blank" rel="noopener">Live-Demo</a>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-content">
-                    <p class="contact-intro">I'm currently looking for a full-time IT Support or System Administration position starting March 2026. If you're looking for someone who builds reliable automation and learns quickly, let's talk!</p>
-                    <div class="contact-methods">
-                        <a href="mailto:tadeas.reindl@gmail.com" class="contact-btn">
-                            <span class="icon">📧</span>
-                            tadeas.reindl@gmail.com
-                        </a>
-                        <a href="https://github.com/pikachugende" target="_blank" rel="noopener" class="contact-btn">
-                            <span class="icon">💻</span>
-                            github.com/pikachugende
-                        </a>
-                        <a href="#" class="contact-btn" id="telegram-btn">
-                            <span class="icon">✈️</span>
-                            Telegram: @RNRWNKLR
-                        </a>
-                    </div>
-                    <form class="contact-form" action="https://formsubmit.co/tadeas.reindl@gmail.com" method="POST">
-                        <input type="hidden" name="_subject" value="Neue Kontaktanfrage über Portfolio">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://pikachugende.github.io/#contact">
-
-                        <label for="contact-name">Name</label>
-                        <input id="contact-name" name="name" type="text" required placeholder="Dein Name">
-
-                        <label for="contact-email">E-Mail</label>
-                        <input id="contact-email" name="email" type="email" required placeholder="deine@email.com">
-
-                        <label for="contact-message">Nachricht</label>
-                        <textarea id="contact-message" name="message" rows="5" required placeholder="Worum geht's?"></textarea>
-
-                        <button type="submit" class="btn btn-primary contact-submit">Nachricht senden</button>
-                    </form>
-
-                    <div class="availability">
-                        <strong>Availability:</strong> Full-time from March 2026 (also open to part-time projects before then)
+        <section id="contact" class="section section-alt">
+            <div class="container narrow">
+                <h2 class="section-title">Kontakt</h2>
+                <div class="card reveal contact-card">
+                    <p>Wenn du über GitHub hier gelandet bist oder ein Team Verstärkung sucht: gerne schreiben.</p>
+                    <div class="cta-buttons">
+                        <a href="mailto:tadeas.reindl@gmail.com" class="btn btn-primary">E-Mail senden</a>
+                        <a href="https://t.me/pikachugende" target="_blank" rel="noopener" class="btn btn-secondary">Telegram</a>
+                        <a href="https://github.com/pikachugende" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Profil</a>
                     </div>
                 </div>
             </div>
@@ -263,13 +137,14 @@ const ted = {
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>© <span id="year"></span> Tadeáš Reindl. Built with passion & GitHub Pages.</p>
-            <p class="footer-tagline">No worries, building freedom. 🚀</p>
+        <div class="container footer-inner">
+            <p><a href="https://github.com/pikachugende" target="_blank" rel="noopener">GitHub</a></p>
+            <p>Tadeáš Reindl</p>
+            <p>© <span id="year"></span></p>
         </div>
     </footer>
 
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+    <button class="back-to-top" id="back-to-top" aria-label="Nach oben">↑</button>
 
     <script src="script.js"></script>
 </body>
