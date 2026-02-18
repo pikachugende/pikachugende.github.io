@@ -17,7 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="dark">
+    <div class="scroll-progress" id="scroll-progress"></div>
     <header class="site-header" id="top">
         <nav class="navbar" aria-label="Hauptnavigation">
             <div class="container nav-inner">
@@ -39,17 +40,17 @@
         <section id="hero" class="hero section">
             <div class="container">
                 <div class="hero-content">
-                    <div class="hero-text card reveal">
-                        <p class="greeting">Hey, ich bin</p>
-                        <h1>Tadeáš Reindl</h1>
-                        <p class="subtitle">IT-Student aus Wien · Fokus auf IT Support, SysAdmin & Automation</p>
-                        <p class="tagline">Diese Seite ist mein kompaktes <strong>About-me Profil</strong>: für Leute, die über GitHub auf mich stoßen, und für Firmen, die schnell sehen wollen, wie ich arbeite, was ich baue und wonach ich suche.</p>
-                        <div class="cta-buttons">
+                    <div class="hero-text card">
+                        <p class="greeting hero-anim" style="--i:0">Hey, ich bin</p>
+                        <h1 class="hero-anim" style="--i:1">Tadeáš Reindl</h1>
+                        <p class="subtitle hero-anim" style="--i:2">IT-Student aus Wien · Fokus auf IT Support, SysAdmin & Automation</p>
+                        <p class="tagline hero-anim" style="--i:3">Diese Seite ist mein kompaktes <strong>About-me Profil</strong>: für Leute, die über GitHub auf mich stoßen, und für Firmen, die schnell sehen wollen, wie ich arbeite, was ich baue und wonach ich suche.</p>
+                        <div class="cta-buttons hero-anim" style="--i:4">
                             <a href="#about" class="btn btn-primary">Kurzprofil lesen</a>
                             <a href="#contact" class="btn btn-secondary">Kontakt aufnehmen</a>
                         </div>
                     </div>
-                    <div class="hero-visual reveal">
+                    <div class="hero-visual hero-anim" style="--i:2">
                         <div class="code-window card">
                             <div class="window-header">
                                 <span class="dot red"></span>
@@ -79,7 +80,7 @@
 
         <section id="about" class="section">
             <div class="container narrow">
-                <h2 class="section-title">About me auf einen Blick</h2>
+                <h2 class="section-title reveal">About me auf einen Blick</h2>
                 <div class="card reveal">
                     <p class="about-intro">Ich mache komplexe IT-Themen verständlich und umsetzbar. Besonders Spaß macht mir, wenn aus manuellen Abläufen stabile, dokumentierte Prozesse werden.</p>
                     <div class="about-details">
@@ -97,21 +98,21 @@
 
         <section id="projects" class="section section-alt">
             <div class="container">
-                <h2 class="section-title">Ausgewählte Projekte</h2>
-                <div class="projects-grid">
-                    <article class="project-card card reveal">
+                <h2 class="section-title reveal">Ausgewählte Projekte</h2>
+                <div class="projects-grid stagger-children">
+                    <article class="project-card card">
                         <h3>Proactive Agent Framework</h3>
                         <p>Onboarding-, Memory- und Workflow-System für einen autonomen AI-Companion mit Fokus auf Zuverlässigkeit.</p>
                         <div class="project-tech"><span>OpenClaw</span><span>Agent Design</span><span>TypeScript</span></div>
                         <a href="https://github.com/pikachugende" class="btn btn-primary" target="_blank" rel="noopener">Repository öffnen</a>
                     </article>
-                    <article class="project-card card reveal">
+                    <article class="project-card card">
                         <h3>Audio Transcription Pipeline</h3>
                         <p>Whisper-Workflow mit ffmpeg-Integration für stabile Audio-zu-Text-Prozesse und reproduzierbare Setups.</p>
                         <div class="project-tech"><span>Whisper</span><span>ffmpeg</span><span>Node.js</span></div>
                         <a href="https://github.com/pikachugende" class="btn btn-primary" target="_blank" rel="noopener">Code ansehen</a>
                     </article>
-                    <article class="project-card card reveal">
+                    <article class="project-card card">
                         <h3>GitHub Pages Automation</h3>
                         <p>Deployment-Pipelines für statische Seiten via GitHub Actions mit schnellem Iterationszyklus.</p>
                         <div class="project-tech"><span>GitHub Actions</span><span>CI/CD</span><span>Static Sites</span></div>
@@ -123,12 +124,12 @@
 
         <section id="contact" class="section section-alt">
             <div class="container narrow">
-                <h2 class="section-title">Kontakt</h2>
+                <h2 class="section-title reveal">Kontakt</h2>
                 <div class="card reveal contact-card">
                     <p>Wenn du über GitHub hier gelandet bist oder ein Team Verstärkung sucht: gerne schreiben.</p>
                     <div class="cta-buttons">
                         <a href="mailto:tadeas.reindl@gmail.com" class="btn btn-primary">E-Mail senden</a>
-                        <a href="https://t.me/pikachugende" target="_blank" rel="noopener" class="btn btn-secondary">Telegram</a>
+                        <a href="https://t.me/RNRWNKLR" target="_blank" rel="noopener" class="btn btn-secondary">Telegram</a>
                         <a href="https://github.com/pikachugende" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Profil</a>
                     </div>
                 </div>
